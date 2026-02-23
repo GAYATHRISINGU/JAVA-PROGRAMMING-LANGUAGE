@@ -1,4 +1,4 @@
-// Writing a program to find a number whether it is Positive or Negative.
+// Writing a program to find a number whether it is Positive or Negative.//
 
 import java.util.Scanner; 
 // Scanner class is used to read input from keyboard 
