@@ -1,0 +1,24 @@
+//Program WITHOUT Exception Handling 
+
+import java.util.Scanner; 
+ 
+class DivisionWithoutException { 
+ 
+    public static void main(String[] args) { 
+ 
+        Scanner scan = new Scanner(System.in); 
+ 
+        System.out.println("Enter numerator:"); 
+        int a = scan.nextInt(); 
+ 
+        System.out.println("Enter denominator:"); 
+        int b = scan.nextInt(); 
+ 
+        int result = a / b;   // Problem if b = 0 
+ 
+System.out.println("Result = " + result); 
+System.out.println("Program Ended Successfully"); 
+} 
+} 
+Output: 
+If user enters:
