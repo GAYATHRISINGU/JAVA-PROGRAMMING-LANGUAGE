@@ -1,0 +1,47 @@
+//METHOD BINDNG IN JAVA
+import java.util.Scanner;
+class Operation
+{
+    void calculate(int number)
+    {
+        System.out.println("generic operation");
+    }
+}
+class Square extends Operation
+{
+    void calculate(int number)
+    {
+        System.out.println("square of"+number+"is:"+(number*number));
+    }
+}
+class Cube extends Operation 
+{
+    void calculate(int number)
+    {
+        System.out.println("cube of:"+number+"is:"+(number*number*number));
+    }
+}
+public class MethodBinding
+{
+    public static void main(String[] args)
+    {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("enter any number:");
+        int num=scan.nextInt();
+        System.out.println("choose operation:");
+        System.out.println("1.square");
+        System.out.println("2.cube");
+        int choice=scan.nextInt();
+        Operation op;
+        if(choice==1)
+        {
+            op=new Square();
+        }
+        else
+        {
+            op=new Cube();
+        }
+        op.calculate(num);
+        scan.close();
+    }
+}
