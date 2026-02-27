@@ -1,0 +1,22 @@
+ 
+//Why Inner Class Can Access balance Directly? 
+Because internally Java does something like: //
+
+class InterestCalculator { 
+ 
+    BankAccount outerReference; 
+ 
+    InterestCalculator(BankAccount ref) { 
+        outerReference = ref; 
+    } 
+ 
+    double calculateInterest(double rate) { 
+        return (outerReference.balance * rate) / 100; 
+    } 
+} 
+ 
+//But Java hides this from us. 
+So when we write: 
+account.new InterestCalculator(); 
+Java internally passes: account as hidden parameter. 
+That is why it works.//
